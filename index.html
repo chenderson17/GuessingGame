@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guessing Game</title>
+    <meta name="Author" content="Caroline">
+</head>
+<body>
+    
+    <script>
+        //Game Loop
+        let computerNumber = Math.floor(Math.random() * 10) +1;
+        let userNumber = prompt("Guess a number between 1 and 10!");
+        let guesses = 1;
+        while(computerNumber != userNumber){
+            if(userNumber < computerNumber){
+                alert("Guess a higher number!");
+                userNumber = prompt("Guess a number between 1 and 10!");
+            }
+            else{
+                alert("Guess a lower number!");
+                userNumber = prompt("Guess a number between 1 and 10!");
+            }
+            guesses++;
+
+        }
+        prompt(`You guessed it in ${guesses} guesses!`);
+    </script>
+</body>
+</html>
